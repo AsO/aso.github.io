@@ -1,1 +1,18 @@
-"Hello World" 
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Window.name purge</title>
+    <meta charset="utf-8">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="content-style-type" content="text/css">
+    <meta http-equiv="content-script-type" content="text/javascript">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <script type="text/javascript">
+      top.name = "_blank";
+      top.location.href = document.referrer;
+    </script>
+  </body>
+</html>
