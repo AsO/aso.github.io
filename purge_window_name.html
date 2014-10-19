@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Window.name purge</title>
+    <title>erase window.name</title>
     <meta charset="utf-8">
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta http-equiv="content-style-type" content="text/css">
@@ -12,9 +12,11 @@
   <body>
     <p>Hello.</p>
     <script type="text/javascript">
-      if (top.name !== '' || top.location.href !== document.referrer) {
+      if (top.name !== '') {
         top.name = '';
-        top.location.href = document.referrer;
+      }
+      if (top.location.href !== document.referrer) {
+        top.location.href = document.referrer + location.hash;
       }
     </script>
   </body>
