@@ -12,8 +12,8 @@
   <body>
     <p>Hello.</p>
     <script type="text/javascript">
-      top.name = "_blank";
-      if (top.location.href !== document.referrer) {
+      if (top.name !== '' || top.location.href !== document.referrer) {
+        top.name = '';
         top.location.href = document.referrer;
       }
     </script>
