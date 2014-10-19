@@ -12,7 +12,9 @@
   <body>
     <script type="text/javascript">
       top.name = "_blank";
-      top.location.href = document.referrer;
+      if (top.location.href !== document.referrer) {
+        top.location.href = document.referrer;
+      }
     </script>
   </body>
 </html>
