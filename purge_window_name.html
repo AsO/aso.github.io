@@ -15,7 +15,7 @@
       if (top.name !== '') {
         top.name = '';
       }
-      if (top.location.href !== document.referrer) {
+      if (top.location.href.indexOf(document.referrer) === -1) {
         top.location.href = document.referrer + location.hash;
       }
     </script>
